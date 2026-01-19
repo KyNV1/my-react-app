@@ -1,40 +1,27 @@
-import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-const reactLogo = "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-import viteLogo from '/vite.svg'
-import './App.css'
+import WelcomeCard from './WelcomeCard';
+import Counter from './Counter';
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <div className="container">
       <div className="glass-card">
-        <div className="logos">
-          <a href="https://vite.dev" target="_blank">
-            <img src={viteLogo} className="logo" alt="Vite logo" />
-          </a>
-          <a href="https://react.dev" target="_blank">
-            <img src={reactLogo} className="logo react" alt="React logo" />
-          </a>
-        </div>
-        <h1>Vite + React</h1>
-        <p className="subtitle">Premium Development Experience</p>
+        <h1>Học React Level Up 🚀</h1>
+        <p className="subtitle">Thực hành Props & State</p>
         
-        <div className="card">
-          <button className="premium-btn" onClick={() => setCount((count) => count + 1)}>
-            Count is {count}
-          </button>
-          <p>
-            Edit <code>src/App.tsx</code> and save to test HMR
-          </p>
-        </div>
-        <p className="read-the-docs">
-          Click on the Vite and React logos to learn more
-        </p>
+        <hr style={{ margin: "20px 0", border: "0.5px solid #eee" }} />
+
+        {/* 1. Phần thực hành Props */}
+        <WelcomeCard courseName="ReactJS Master" teacherName="Antigravity Detective" />
+
+        <hr style={{ margin: "20px 0", border: "0.5px solid #eee" }} />
+
+        {/* 2. Phần thực hành State */}
+        <Counter />
+
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
