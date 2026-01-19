@@ -20,6 +20,8 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
+    /* React */
+    "jsx": "react-jsx",
     "noUncheckedSideEffectImports": true
   },
   "include": ["src"]
