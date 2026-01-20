@@ -1,4 +1,5 @@
-import WelcomeCard from './WelcomeCard'; // Import component vừa tạo
+import RegisterCourse, { ScheduleCourse } from "./WelcomeCard";
+
 
 function App() {
   return (
@@ -6,7 +7,8 @@ function App() {
       <h1>Ứng dụng đầu tiên của tôi</h1>
       <hr />
       {/* Sử dụng component như một thẻ HTML tự đóng */}
-      <WelcomeCard />
+      <RegisterCourse />
+      <ScheduleCourse />
     </div>
   );
 }
