@@ -9,14 +9,32 @@ All notable changes to this project will be documented in this file.
 - New branch `bai-tap-thuc-hanh` for practice exercises.
 - `WelcomeCard` component with TypeScript support.
 
+## [2026-01-20] - Part 1
+
+### Added
+
+- New branch `lesson/props-state-management` for advanced practice.
+- `Student Management` system:
+  - `src/types.ts`: Shared data structures.
+  - `src/StudentList.tsx`: Main state management (Parent).
+  - `src/StudentCard.tsx`: Display component (Child).
+  - `src/AddStudentForm.tsx`: Input component with local state.
+- `src/Counter.tsx`: Simple state practice component.
+
 ### Changed
 
-- Migrated `WelcomeCard.js` to `WelcomeCard.tsx` to support JSX and TypeScript.
-- Refactored `WelcomeCard` to use prop destructuring and default values.
-- Updated `App.tsx` to use the refactored `WelcomeCard`.
+- Implemented "Lifting State Up" pattern.
 
-### Fixed
+## [2026-01-20] - Part 2
 
-- Fixed Vite "Pre-transform error" (invalid JS syntax error) by using the correct `.tsx` extension for JSX content.
-- Fixed typo in variable name `couserName` -> `courseName`.
-- Removed unused `React` imports for cleaner code.
+### Added
+
+- New branch `lesson/static-props-app` for Static Content & Props study.
+- `TechVibe Landing Page`:
+  - `src/siteData.ts`: Centralized static data.
+  - `src/components/Navbar.tsx`, `Hero.tsx`, `FeatureCard.tsx`, `Footer.tsx`.
+- Implemented list rendering using `.map()` with unique `key` props.
+
+### Changed
+
+- Refactored `App.tsx` into a modular Landing Page.

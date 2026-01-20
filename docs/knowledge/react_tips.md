@@ -11,3 +11,14 @@
 - **Optional Props**: Use `?` in interface definitions (e.g., `name?: string`) to make props optional.
 - **Default Values**: Combine destructuring with assignment (e.g., `{ name = "Default" }`) to handle missing props.
 - **Types**: Use lowercase `string`, `number`, `boolean` for TypeScript types (primitive types).
+
+## List Rendering & Key Prop
+
+- **.map()**: The standard way to render collections of data into components.
+- **Key Prop**: Mandatory unique identifier for each item in a list. Helps React's Virtual DOM track changes efficiently.
+- **Spread Operator (`{...item}`)**: Quick way to pass all properties of an object as props if names match.
+
+## Project Structure (Best Practices)
+
+- **siteData.ts**: Keep static content in a separate data file to keep UI logic clean.
+- **components/**: Keep UI pieces in a dedicated folder for better organization.

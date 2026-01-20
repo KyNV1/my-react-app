@@ -17,9 +17,12 @@ A simple React project built with Vite and TypeScript.
 
 ## Project Structure
 
-- `src/App.tsx`: Main application component.
-- `src/WelcomeCard.tsx`: A reusable card component demonstrating props and TypeScript.
+- `src/App.tsx`: Main application component (currently the TechVibe Landing Page).
+- `src/components/`: Modular UI components.
+- `src/siteData.ts`: Centralized static content.
 
 ## Practice Branches
 
-- `bai-tap-thuc-hanh`: Contains completed practice exercises (Props, Destructuring, TS Interfaces).
+- `bai-tap-thuc-hanh`: Initial React/Vite fixes.
+- `lesson/props-state-management`: Student Management app (State study).
+- `lesson/static-props-app`: TechVibe Landing Page (Props & List Rendering study).
