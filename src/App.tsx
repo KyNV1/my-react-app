@@ -1,64 +1,51 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import FeatureCard from "./components/FeatureCard";
-import Footer from "./components/Footer";
-import { siteData } from "./siteData";
+import Layout from "./components/Layout";
+import Card from "./components/Card";
 
 function App() {
-  const containerStyle: React.CSSProperties = {
-    fontFamily: "'Inter', sans-serif",
-    color: "#2c3e50",
-    backgroundColor: "#fff",
-    minHeight: "100vh",
-  };
-
-  const featureSectionStyle: React.CSSProperties = {
-    padding: "80px 50px",
-    maxWidth: "1200px",
-    margin: "0 auto",
-  };
-
   return (
-    <div style={containerStyle}>
-      {/* 1. Navbar: Nhận brand và links qua Props */}
-      <Navbar brand={siteData.brand} links={siteData.navLinks} />
+    // 1. Dùng Layout làm "Khung" bao bọc toàn bộ
+    <Layout>
+      <div style={{ maxWidth: "800px", margin: "0 auto" }}>
 
-      {/* 2. Hero: Nhận nội dung quảng cáo qua Props */}
-      <Hero
-        title={siteData.hero.title}
-        subtitle={siteData.hero.subtitle}
-        cta={siteData.hero.cta}
-      />
-
-      {/* 3. Features: Duyệt mảng dữ liệu và render các FeatureCard qua Props */}
-      <section style={featureSectionStyle}>
-        <h2 style={{ textAlign: "center", marginBottom: "50px", fontSize: "2rem" }}>
-          Tại sao chọn chúng tôi?
+        <h2 style={{ textAlign: "center", color: "#2c3e50" }}>
+          Demo: Sức mạnh của Children Props
         </h2>
-        <div style={{
-          display: "flex",
-          gap: "30px",
-          flexWrap: "wrap",
-          justifyContent: "center"
-        }}>
-          {siteData.features.map((item) => (
-            <FeatureCard
-              key={item.id}
-              icon={item.icon}
-              title={item.title}
-              description={item.description}
-              color={item.color}
-            />
-          ))}
-        </div>
-      </section>
 
-      {/* 4. Footer: Nhận thông tin bản quyền qua Props */}
-      <Footer
-        company={siteData.footer.company}
-        year={siteData.footer.year}
-      />
-    </div>
+        {/* 2. Dùng Card để bao bọc một đoạn văn thông thường */}
+        <Card title="Chuyện kể về React">
+          <p>
+            React được phát triển bởi Facebook. Một trong những khái niệm quan trọng
+            nhất là <strong>Composition</strong> (Sự kết hợp).
+          </p>
+          <p>
+            Thay vì tạo ra các component khổng lồ, ta tạo ra các "Wrapper" như cái Card này.
+          </p>
+        </Card>
+
+        {/* 3. Dùng Card để bao bọc một Cấu trúc HTML phức tạp hơn */}
+        <Card
+          title="Đăng ký nhận tin"
+          footer={<button style={{ padding: "5px 15px", cursor: "pointer" }}>Gửi ngay</button>}
+        >
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
+            <label>Email của bạn:</label>
+            <input type="email" placeholder="email@example.com" style={{ padding: "8px" }} />
+            <div style={{ display: "flex", alignItems: "center", gap: "5px" }}>
+              <input type="checkbox" id="agree" />
+              <label htmlFor="agree">Tôi đồng ý với điều khoản</label>
+            </div>
+          </div>
+        </Card>
+
+        {/* 4. Thậm chí có thể lồng các Card vào nhau nếu muốn */}
+        <Card title="Thông báo hệ thống">
+          <div style={{ backgroundColor: "#fff9db", padding: "10px", borderRadius: "4px" }}>
+            ⚠️ Đây là một thông báo nằm trong Card.
+          </div>
+        </Card>
+
+      </div>
+    </Layout>
   );
 }
 
