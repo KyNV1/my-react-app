@@ -1,5 +1,6 @@
 import WelcomeCard from './WelcomeCard';
 import Counter from './Counter';
+import StudentList from './StudentList';
 import './App.css';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
       <div className="glass-card">
         <h1>Học React Level Up 🚀</h1>
         <p className="subtitle">Thực hành Props & State</p>
-        
+
         <hr style={{ margin: "20px 0", border: "0.5px solid #eee" }} />
 
         {/* 1. Phần thực hành Props */}
@@ -16,8 +17,13 @@ function App() {
 
         <hr style={{ margin: "20px 0", border: "0.5px solid #eee" }} />
 
-        {/* 2. Phần thực hành State */}
+        {/* 2. Phần thực hành State đơn giản */}
         <Counter />
+
+        <hr style={{ margin: "20px 0", border: "0.5px solid #eee" }} />
+
+        {/* 3. Phần thực hành Props & State Management (Advanced) */}
+        <StudentList />
 
       </div>
     </div>
