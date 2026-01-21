@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 interface CardProps {
     title: string;
@@ -21,7 +21,6 @@ function Card({ title, children, footer }: CardProps) {
     const headerStyle: React.CSSProperties = {
         padding: "15px 20px",
         backgroundColor: "#3498db",
-        color: "#white",
         margin: 0,
         fontSize: "1.2rem",
         color: "white"
